@@ -17,6 +17,30 @@ After MongoDB container is setup, we finally can use our python script. We locat
 
 It will print out all the answers to the questions below.
 
+GetAllUniqueUsers():
+
+This function finds all the unique users in the database.
+
+GetMostLinkingUsers():
+
+This function prints the top 10 most others mentioning/linking users.
+
+GetMostLinkedUsers():
+
+This function prints the top 5 most mentioned/linked users.
+
+GetMostActiveUser():
+
+This function finds the top 5 most actice users that posted the most tweets.
+
+GetMostNegativeTweets():
+
+This function returns top 5 most negative users. That used specific keywords indicated in the function (ex. sad, pissed, mad, etc.), polarity and the amount of negative tweets.
+
+GetMostPositiveTweets():
+
+This function returns top 5 most positive users. That used specific keywords indicated in the function (ex. happy, amazing, excited, etc.), polarity and the amount of positive tweets.
+
 Queries corresponding to the following questions:
 
     How many Twitter users are in the database?
