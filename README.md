@@ -9,9 +9,35 @@ After Docker is installed you need to setup your MongoDB:
 
 ```sudo docker run --rm -v $(pwd)/data:/data/db --name dbms --publish=27017:27017 -d mongo:latest```
 
-```sudo docker run -it --link dbms:mongo --rm mongo sh -c 'exec mongo "$MONGO_PORT_27017_TCP_ADDR:$MONGO_PORT_27017_TCP_PORT/test"'```
+```docker exec -it dbms bash```
+or 
+```docker exec -it 98ac bash``` 
 
-After MongoDB container is setup, we finally can use our python script. We locate ourself to the folder where the script is located and the run the syntax:
+You can get the for digits from ```docker ps``` and take the first 4 digits from the container id.
+
+The you will directed to the dockers bash where you will need to download wget and unzip:
+
+```apt-get update```
+```apt-get install -y wget```
+```apt-get install -y unzip```
+
+Then you will need to download the data you will store in the database:
+
+```wget http://cs.stanford.edu/people/alecmgo/trainingandtestdata.zip```
+
+Unzip it:
+
+```unzip trainingandtestdata.zip```
+
+We create the headerlines (fields) for the data from the CSV:
+
+```sed -i '1s;^;polarity,id,date,query,user,text\n;' training.1600000.processed.noemoticon.csv```
+
+Finally we import the data to MongoDB:
+
+```mongoimport --drop --db social_net --collection tweets --type csv --headerline --file training.1600000.processed.noemoticon.csv```
+
+After MongoDB container is setup, we finally can use our python script via terminal. We locate ourself to the folder where the script is located and the run the syntax:
 
 ```python MongoDBReader.py```
 
