@@ -1,5 +1,10 @@
 
-    Follow the steps to get the database and MongoDB: https://github.com/datsoftlyngby/soft2018spring-databases-teaching-material/blob/master/lecture_notes/02-Intro_to_MongoDB.ipynb
+    Follow the steps to get the database and MongoDB:
+    Firstly Install Docker:
+    ```wget -O - https://bit.ly/docker-install | bash```
+    
+    
+    
     git clone https://github.com/Ekskursantas/MongoDBReader
     pip install pymongo
     In Terminal run python MongoDBReader.py in the directory where cloned file is located
