@@ -31,7 +31,7 @@ This function prints the top 5 most mentioned/linked users.
 
 GetMostActiveUser():
 
-This function finds the top 5 most actice users that posted the most tweets.
+This function finds the top 10 most actice users that posted the most tweets.
 
 GetMostNegativeTweets():
 
