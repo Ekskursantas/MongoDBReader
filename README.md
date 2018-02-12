@@ -19,6 +19,11 @@ It will print out all the answers to the questions below.
 
 GetAllUniqueUsers():
 
+Get Total Number Of Unique Users
+```
+659774
+```
+
 This function finds all the unique users in the database.
 
 GetMostLinkingUsers():
@@ -30,6 +35,12 @@ Get Most Linking Users:
 {u'mentions': 251, u'_id': u'VioletsCRUK'}
 {u'mentions': 246, u'_id': u'what_bugs_u'}
 {u'mentions': 245, u'_id': u'tsarnick'}
+{u'mentions': 229, u'_id': u'SallytheShizzle'}
+{u'mentions': 217, u'_id': u'mcraddictal'}
+{u'mentions': 216, u'_id': u'Karen230683'}
+{u'mentions': 211, u'_id': u'keza34'}
+{u'mentions': 202, u'_id': u'TraceyHewins'}
+
 ```
 
 This function prints the top 10 most others mentioning/linking users.
@@ -69,10 +80,27 @@ This function finds the top 10 most actice users that posted the most tweets.
 
 GetMostNegativeTweets():
 
+Get The Saddest Users:
+```
+{u'emotion': 0.0, u'_id': u'PaoloAlonso', u'total_negative_tweets': 20}
+{u'emotion': 0.0, u'_id': u'yanarropak', u'total_negative_tweets': 12}
+{u'emotion': 0.0, u'_id': u'x0xnina', u'total_negative_tweets': 8}
+{u'emotion': 0.0, u'_id': u'Arantza92', u'total_negative_tweets': 8}
+{u'emotion': 0.0, u'_id': u'sbjayy', u'total_negative_tweets': 8}
+```
+
 This function returns top 5 most negative users. That used specific keywords indicated in the function (ex. sad, pissed, mad, etc.), polarity and the amount of negative tweets.
 
 GetMostPositiveTweets():
 
+Get The Happiest Users:
+```
+{u'emotion': 4.0, u'_id': u'caldjr', u'total_positive_tweets': 40}
+{u'emotion': 4.0, u'_id': u'jessa_hugz', u'total_positive_tweets': 29}
+{u'emotion': 4.0, u'_id': u'DarkPiano', u'total_positive_tweets': 29}
+{u'emotion': 4.0, u'_id': u'josephranseth', u'total_positive_tweets': 25}
+{u'emotion': 4.0, u'_id': u'kjgriffin18', u'total_positive_tweets': 23}
+```
 This function returns top 5 most positive users. That used specific keywords indicated in the function (ex. happy, amazing, excited, etc.), polarity and the amount of positive tweets.
 
 Queries corresponding to the following questions:
