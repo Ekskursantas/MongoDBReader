@@ -15,7 +15,7 @@ def GetMostLinkingUsers():
         {'$addFields': {"mentions":1}},
         {'$group':{"_id":"$user", "mentions":{'$sum':1}}},
         {'$sort':{"mentions":-1}},
-        {'$limit':5}]
+        {'$limit':10}]
     cursorlist = db.tweets.aggregate(pipeline)
     for cursor in cursorlist:
         print(cursor)
@@ -51,7 +51,7 @@ def GetMostNegativeTweets():
         {'$match':{'text': {'$regex':'pissed|mad|angry|sad|furious|outraged','$options':'g'}}},
         {'$group':{'_id':"$user", 'emotion': {'$avg':"$polarity"}, 'total_negative_tweets': {'$sum': 1}}},
         {'$sort':{ 'emotion': 1, 'total_negative_tweets':-1}},
-        {'$limit':10}
+        {'$limit':5}
     ]
     negativeUser = db.tweets.aggregate(pipeline)
     for negUser in negativeUser:
@@ -62,7 +62,7 @@ def GetMostPositiveTweets():
         {'$match':{'text': {'$regex':'happy|excited|great|amazing|love|enticed','$options':'g'}}},
         {'$group':{'_id':"$user", 'emotion': {'$avg':"$polarity"},'total_positive_tweets': {'$sum': 1}}},
         {'$sort':{ 'emotion': -1, 'total_positive_tweets':-1}},
-        {'$limit':10}
+        {'$limit':5}
     ]
     positiveUser = db.tweets.aggregate(pipeline)
     for posUser in positiveUser:
