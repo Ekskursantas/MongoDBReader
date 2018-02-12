@@ -69,7 +69,8 @@ def GetMostPositiveTweets():
         print(posUser)
 
        
-
+print("Get Total Number Of Unique Users")
+GetAllUniqueUsers()
 print("Get Most Linking Users:")
 GetMostLinkingUsers()
 print("Get Most Linked Users:")
