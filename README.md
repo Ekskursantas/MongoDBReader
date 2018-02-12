@@ -23,13 +23,47 @@ This function finds all the unique users in the database.
 
 GetMostLinkingUsers():
 
+Get Most Linking Users:
+```
+{u'mentions': 549, u'_id': u'lost_dog'}
+{u'mentions': 310, u'_id': u'tweetpet'}
+{u'mentions': 251, u'_id': u'VioletsCRUK'}
+{u'mentions': 246, u'_id': u'what_bugs_u'}
+{u'mentions': 245, u'_id': u'tsarnick'}
+```
+
 This function prints the top 10 most others mentioning/linking users.
 
 GetMostLinkedUsers():
 
+Get Most Linked Users:
+```
+{u'total': 4310, u'_id': u'@mileycyrus'}
+{u'total': 3837, u'_id': u'@tommcfly'}
+{u'total': 3349, u'_id': u'@ddlovato'}
+{u'total': 1263, u'_id': u'@Jonasbrothers'}
+{u'total': 1222, u'_id': u'@DavidArchie'}
+```
+
+
 This function prints the top 5 most mentioned/linked users.
 
 GetMostActiveUser():
+
+Get Most Active Users:
+```
+{u'total': 549, u'_id': u'lost_dog'}
+{u'total': 345, u'_id': u'webwoke'}
+{u'total': 310, u'_id': u'tweetpet'}
+{u'total': 281, u'_id': u'SallytheShizzle'}
+{u'total': 279, u'_id': u'VioletsCRUK'}
+{u'total': 276, u'_id': u'mcraddictal'}
+{u'total': 248, u'_id': u'tsarnick'}
+{u'total': 246, u'_id': u'what_bugs_u'}
+{u'total': 238, u'_id': u'Karen230683'}
+{u'total': 236, u'_id': u'DarkPiano'}
+```
+
 
 This function finds the top 10 most actice users that posted the most tweets.
 
