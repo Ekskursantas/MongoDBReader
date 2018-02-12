@@ -1,8 +1,9 @@
 
     Follow the steps to get the database and MongoDB:
     Firstly Install Docker:
-    ```wget -O - https://bit.ly/docker-install | bash```
-    
+    ```
+    wget -O - https://bit.ly/docker-install | bash
+    ```
     
     
     git clone https://github.com/Ekskursantas/MongoDBReader
